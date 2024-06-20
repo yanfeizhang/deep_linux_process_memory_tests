@@ -1,0 +1,56 @@
+
+likely:     file format mach-o-arm64
+
+
+Disassembly of section .text:
+
+0000000100003f58 <_main>:
+   100003f58:	d10083ff 	sub	sp, sp, #0x20
+   100003f5c:	a9017bfd 	stp	x29, x30, [sp, #16]
+   100003f60:	910043fd 	add	x29, sp, #0x10
+   100003f64:	f9400420 	ldr	x0, [x1, #8]
+   100003f68:	9400000d 	bl	100003f9c <_main+0x44>
+   100003f6c:	52800188 	mov	w8, #0xc                   	// #12
+   100003f70:	51000809 	sub	w9, w0, #0x2
+   100003f74:	7100281f 	cmp	w0, #0xa
+   100003f78:	1a890108 	csel	w8, w8, w9, eq	// eq = none
+   100003f7c:	f90003e8 	str	x8, [sp]
+   100003f80:	100001a0 	adr	x0, 100003fb4 <_main+0x5c>
+   100003f84:	d503201f 	nop
+   100003f88:	94000008 	bl	100003fa8 <_main+0x50>
+   100003f8c:	52800000 	mov	w0, #0x0                   	// #0
+   100003f90:	a9417bfd 	ldp	x29, x30, [sp, #16]
+   100003f94:	910083ff 	add	sp, sp, #0x20
+   100003f98:	d65f03c0 	ret
+
+Disassembly of section __TEXT.__stubs:
+
+0000000100003f9c <__TEXT.__stubs>:
+   100003f9c:	b0000010 	adrp	x16, 100004000 <_main+0xa8>
+   100003fa0:	f9400210 	ldr	x16, [x16]
+   100003fa4:	d61f0200 	br	x16
+   100003fa8:	b0000010 	adrp	x16, 100004000 <_main+0xa8>
+   100003fac:	f9400610 	ldr	x16, [x16, #8]
+   100003fb0:	d61f0200 	br	x16
+
+Disassembly of section __TEXT.__unwind_info:
+
+0000000100003fb8 <__TEXT.__unwind_info>:
+   100003fb8:	00000001 	udf	#1
+   100003fbc:	0000001c 	udf	#28
+   100003fc0:	00000000 	udf	#0
+   100003fc4:	0000001c 	udf	#28
+   100003fc8:	00000000 	udf	#0
+   100003fcc:	0000001c 	udf	#28
+   100003fd0:	00000002 	udf	#2
+   100003fd4:	00003f58 	udf	#16216
+   100003fd8:	00000034 	udf	#52
+   100003fdc:	00000034 	udf	#52
+   100003fe0:	00003f9d 	udf	#16285
+   100003fe4:	00000000 	udf	#0
+   100003fe8:	00000034 	udf	#52
+   100003fec:	00000003 	udf	#3
+   100003ff0:	0001000c 	.inst	0x0001000c ; undefined
+   100003ff4:	00010010 	.inst	0x00010010 ; undefined
+   100003ff8:	00000000 	udf	#0
+   100003ffc:	04000000 	add	z0.b, p0/m, z0.b, z0.b
