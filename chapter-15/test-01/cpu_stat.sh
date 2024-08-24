@@ -9,7 +9,7 @@ stime=$(awk '{print $15}' /proc/"$pid"/stat)
 cutime=$(awk '{print $16}' /proc/"$pid"/stat)
 cstime=$(awk '{print $17}' /proc/"$pid"/stat)
 
-# 获取系统的 CPU 时间总数
+# 获取的 CPU 时间总数
 cpu_total_time=$(grep '^cpu ' /proc/stat | awk '{print $2+$3+$4+$5+$6+$7+$8}')
 
 # 计算进程的 CPU 时间总数
