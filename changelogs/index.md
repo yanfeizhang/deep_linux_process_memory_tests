@@ -5,6 +5,7 @@
 - P20: 1.4.3小节页面下方，
 	- 物理CPU： "通过physical id命令" => "通过physical id"，去掉命令两个字
 	- 物理核： "通过core id命令" => "通过core id"，去掉命令两个字
+- P379: 第五行， "我们找一个cpuacct.stat来看" => "我们找一个cpuacct.usage来看"
 
 ### 勘误
 - P46: 页面中间， "对于 1R X 6的内存条" => "对于 1R X 6的内存条" 这里应该是 16
@@ -13,4 +14,5 @@
 - P175: 页尾 "chapter04/test01" =>  "chapter-06/test01"
 
 
-感谢 @袁世超 @Climber @请输入昵称 @刘家禄 提出的改进建议~
+
+感谢 @andylee @袁世超 @Climber @请输入昵称 @刘家禄 提出的改进建议~
